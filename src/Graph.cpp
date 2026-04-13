@@ -174,7 +174,7 @@ std::vector<std::string> Graph::dfs(const std::string& start) const {
     s.push(start);
 
    
-    while (!s.empty(){
+    while (!s.empty()){
 		std::string current = s.top(); // get the top vertex
 		s.pop(); // remove it from the stack
 
@@ -184,7 +184,7 @@ std::vector<std::string> Graph::dfs(const std::string& start) const {
 
         const auto& nbrs = neighbors(current);
         for (auto it = nbrs.rbegin(); it != nbrs.rend(); ++it) {
-			if (visited.find(*it) == visited.end() {
+			if (visited.find(*it) == visited.end()) {
                 s.push(*it); // push unvisited neighbors onto stack
             }
         }
